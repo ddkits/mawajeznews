@@ -1,2 +1,2 @@
 # mawajeznews
-mawajez news
+arabic mawajez news
