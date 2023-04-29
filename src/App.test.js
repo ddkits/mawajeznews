@@ -10,6 +10,6 @@ import App from './App';
 
 test('Mawajez Test', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Mawajez/i);
+  const linkElement = screen.getByText(/الصفحة/i);
   expect(linkElement).toBeInTheDocument();
 });
