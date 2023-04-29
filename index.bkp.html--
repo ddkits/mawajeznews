@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="VTtuqHVXAUSlqNpiA4pbh8X7uxE6IEHErrnEyint">
-    <title>DDKits CLI Render</title>
-    <meta name="title" content="DDKits CLI Render">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="DDKits CLI Render Style Guide, React Render for API specifications, simple and clear for developers to use, including async, swagger, openapi in one design">
-    <meta name="keywords" content="API, Documentation, Pro, ddkits, docpro, doc, editor, secure, async, asyncapi, openapi, swagger, render, ui, react, reactjs, html, bootstrap, direct preview, developer, apis, api">
-    <meta name="author" content="ddkits.com">
-    <link rel="canonical" href="https://ui.ddkits.com">
-    
-    <meta property="og:title" content="DDKits CLI Render">
-    <meta property="og:image" content="https://ddkits.com/img/dev-doc.png">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://ui.ddkits.com">
-    <meta property="og:sitename" content="DDKits CLI Render">
-    <meta property="og:description" content="DDKits CLI Render Style Guide, React Render for API specifications, simple and clear for developers to use, including async, swagger, openapi in one design">
-    <meta name="twitter:title" content="DDKits CLI Render">
-    <meta name="twitter:image" content="https://ddkits.com/img/dev-doc.png">
-    <meta name="twitter:url" content="https://ui.ddkits.com">
-    <meta name="twitter:card" content="DDKits CLI Render Style Guide, React Render for API specifications, simple and clear for developers to use, including async, swagger, openapi in one design">
+    <title>أخبار مواجيز | Mawajez News</title>
+<meta name="title" content="أخبار مواجيز | Mawajez News">
+<meta name="description" content="أخبار مواجيز | Mawajez News | رغم الهدنة.. اشتباكات عنيفة في محيط القصر الجمهوري والقيادة العامة وسط الخرطوم">
+<meta name="keywords" content="أخبار,مواجيز,news,arab,arabic news,أخبار مواجيز,مركز الأخبار,المصدر,aljazeera,rt,bbc,mayadeen">
+<meta name="author" content="أخبار مواجيز | Mawajez News">
+<link rel="canonical" href="https://mawajez.com">
+<meta name="robots" content="all, index, follow">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="أخبار مواجيز | Mawajez News">
+<meta property="og:image" content="https://ar.mawajez.com/img/blogImage.jpg">
+<meta property="og:url" content="https://mawajez.com">
+<meta property="og:type" content="blog.news">
+<meta property="og:sitename" content="أخبار مواجيز | Mawajez News">
+<meta property="og:description" content="أخبار مواجيز | Mawajez News | رغم الهدنة.. اشتباكات عنيفة في محيط القصر الجمهوري والقيادة العامة وسط الخرطوم, Mawajez News.com">
+<meta name="twitter:title" content="أخبار مواجيز | Mawajez News">
+<meta name="twitter:image" content="https://ar.mawajez.com/img/blogImage.jpg">
+<meta name="twitter:url" content="https://mawajez.com">
+<meta name="twitter:card" content="أخبار مواجيز | Mawajez News | رغم الهدنة.. اشتباكات عنيفة في محيط القصر الجمهوري والقيادة العامة وسط الخرطوم">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="all,follow,index">
   </head>
   <body>
     <div id="rsg-root"></div>
