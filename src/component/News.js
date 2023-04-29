@@ -1,3 +1,10 @@
+/**
+ * Built by Sam Ayoub, Reallexi.com
+ * https://github.com/melayyoub
+ * https://mawajez.com
+ * Important: To use this code please leave the copyright in place
+ * Reallexi LLC, https://reallexi.com
+ */
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
