@@ -35,6 +35,10 @@ img{
 .card-title,.card-body{
   cursor: pointer;
 }
+.thumb{
+  width:150px !important;
+  height: auto;
+}
 .badge-danger {
   color: #fff;
   background-color: #0181d1;

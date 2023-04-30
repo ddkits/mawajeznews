@@ -104,8 +104,14 @@ export default function LatestNews(props) {
                             ? 'https://ar.mawajez.com/assets/images/optimized/gallery-img1.png'
                             : process.env.REACT_APP_MAW_SITE + element?.image
                         }
-                        alt="thumb"
-                        className="img-fluid img-lg"
+                        alt={
+                          element?.title?.rendered
+                            ? element?.title?.rendered
+                            : element?.title
+                            ? element?.title
+                            : '...'
+                        }
+                        className="thumb img-lg"
                       />
                     </div>
                   </div>
