@@ -1,7 +1,50 @@
+body{
+  direction: rtl;
+}
 .App {
   text-align: center;
+ 
 }
 
+/* News styles */
+ 
+.position-relative {
+  position: relative !important;
+ 
+}
+img{
+  object-fit: cover !important;
+  width: 100% !important;
+}
+ 
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.card-title,.card-body{
+  cursor: pointer;
+}
+.badge-danger {
+  color: #fff;
+  background-color: #0181d1;
+}
+ .banner-content {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

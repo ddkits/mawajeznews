@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * Built by Sam Ayoub, Reallexi.com
  * https://github.com/melayyoub
@@ -12,57 +13,96 @@ import NewsItem from './NewsItem';
 import Spinner from './Spinner';
 import propTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import NewsItemHeader from './NewsItemHeader';
+import LatestNews from './LatestNews';
+// import NewsItemHeader from './NewsItemHeader';
 
 const News = (props) => {
   const [articles, setArticles] = useState([]);
+  const [headerArt, setheaderArt] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
+  const [description, setdescription] = useState('');
+  const [showMore, setShowmore] = useState(false);
 
   const updateNews = async () => {
     props.setProgress(10);
     // eslint-disable-next-line no-undef
-    const url = `${process.env.REACT_APP_MAW}?page=${page}`;
+    const url = `${process.env.REACT_APP_MAW}?page=${page}${
+      props?.idfrom ? `&source_id=${props?.idfrom}` : ''
+    }`;
     setLoading(true);
-
-    let data = await fetch(url);
+    await fetch(url)
+      .then((data) => data.json())
+      .then((x) => {
+        const header = x.slice(0, 4);
+        const data = x.slice(4);
+        setheaderArt(header);
+        setArticles(data);
+      });
     props.setProgress(30);
-    let parsedData = await data.json();
     props.setProgress(70);
-    console.group(parsedData);
-    setArticles(parsedData);
     setTotalResults(99999);
     setLoading(false);
+    console.clear();
     props.setProgress(100);
   };
   useEffect(() => {
-    document.title = `${
-      props.category.charAt(0).toUpperCase() + props.category.slice(1)
-    } - NewsZilla`;
+    document.title = `${props?.category}`;
     updateNews();
   }, []);
-
-  // const handleScroll = (e) => {
-  //   const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-  //   if (bottom) {
-  //     setPage(page + 1);
-  //     setTimeout(updateNews(), 100);
-  //   }
-  // };
+  const setDescCallback = (e) => {
+    setShowmore(true);
+    setdescription(e);
+  };
   const fetchMoreData = async () => {
-    const url = `${process.env.REACT_APP_MAW}?page=${page}`;
+    const url = `${process.env.REACT_APP_MAW}?page=${page + 1}${
+      props?.idfrom ? `&source_id=${props?.idfrom}` : ''
+    }`;
     setPage(page + 1);
     setLoading(true);
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(articles.concat(parsedData));
     setLoading(false);
+    console.clear();
   };
   return (
     <div className="container my-3">
+      {showMore && description.length > 0 ? (
+        <>
+          <section
+            key={Math.random()}
+            className="row col-md-12 sticky-top bg-dark text-light p-5 mt-5 maxw-100">
+            <button
+              className="btn btn-danger mt-4"
+              onClick={() => {
+                setShowmore(false);
+              }}>
+              X أغلق
+            </button>
+            <div
+              className="align-middle text-center"
+              dangerouslySetInnerHTML={{
+                __html: `<div class="p-5" style="max-width: 100% !important"><style>iframe{max-width:100% !important;}</style>${
+                  description.split('</iframe></p>')[1]
+                    ? description.split('</iframe></p>')[0]
+                    : description
+                }</div>`
+              }}
+            />
+          </section>
+        </>
+      ) : (
+        ''
+      )}
       <h1 style={{ marginTop: '90px' }} className="text-center">
-        آخر أخبار العالم والشرق الأوسط
+        {props?.idtitle ? `${props?.idtitle}` : ' آخر أخبار العالم والشرق الأوسط'}
       </h1>
+
+      <LatestNews data={headerArt} setDescCallback={(e) => setDescCallback(e)} />
+      <hr />
       {/* {this.state.loading && <Spinner />} */}
       <InfiniteScroll
         dataLength={articles?.length}
@@ -83,6 +123,7 @@ const News = (props) => {
                     }
                     imgUrl={element.image ? process.env.REACT_APP_MAW_SITE + element.image : null}
                     newsUrl={element.url}
+                    setDescCallback={(e) => setDescCallback(e)}
                   />
                 </div>
               );

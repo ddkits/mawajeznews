@@ -7,6 +7,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { channels } from './core/helpers';
 
 const NavBar = () => {
   return (
@@ -26,14 +27,11 @@ const NavBar = () => {
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/general">
-                  الصفحة الرئيسية
-                </Link>
-              </li>
-              <li className="nav-item">
+          <div
+            className="collapse navbar-collapse col-md-12 justify-content-center"
+            id="navbarSupportedContent">
+            <ul className="navbar-nav  mb-2 mb-lg-0 ">
+              <li className="nav-item m-1">
                 <a
                   className="nav-link active"
                   aria-current="page"
@@ -41,32 +39,37 @@ const NavBar = () => {
                   EN
                 </a>
               </li>
-              {/* 
-              <li className="nav-item">
-                <Link className="nav-link" to="/general">
-                  General
-                </Link>
+              {channels.map((x) => {
+                return (
+                  <li key={x.key} className="nav-item m-1">
+                    <Link className="nav-link" to={`/${x.key}`}>
+                      {x.title}
+                    </Link>
+                  </li>
+                );
+              })}
+              {/* extra
+               */}
+              <li className="nav-item m-1">
+                <a className="nav-link" href="https://reallexi.com">
+                  RealLexi
+                </a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/health">
-                  Health
-                </Link>
+              <li className="nav-item m-1">
+                <a className="nav-link" href="https://getfreeapi.com">
+                  GetFreeApi
+                </a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/science">
-                  Science
-                </Link>
+              <li className="nav-item m-1">
+                <a className="nav-link" href="https://ddkits.com">
+                  DDKits
+                </a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/sports">
-                  Sports
-                </Link>
+              <li className="nav-item  m-1">
+                <a className="nav-link" href="https://mawajez.com/login">
+                  تسجيل الدخول
+                </a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/technology">
-                  Technology
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>
