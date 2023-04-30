@@ -35,6 +35,7 @@ img{
 .card-title,.card-body{
   cursor: pointer;
 }
+
 .thumb{
   width:150px !important;
   height: auto;
