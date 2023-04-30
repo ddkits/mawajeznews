@@ -1,22 +1,28 @@
-body{
+body {
   direction: rtl;
 }
+
 .App {
   text-align: center;
- 
+
 }
 
 /* News styles */
- 
+
 .position-relative {
   position: relative !important;
- 
+
 }
-img{
+#latest-news{
+  display: block;
+}
+img {
   object-fit: cover !important;
   width: 100% !important;
+  vertical-align: middle  !important;
+  max-height: 200px;
 }
- 
+
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -29,27 +35,48 @@ img{
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 .fs-12 {
   font-size: 12px;
 }
-.card-title,.card-body{
+
+.card-title,
+.card-body {
   cursor: pointer;
 }
 
-.thumb{
-  width:150px !important;
+.thumb {
+  width: 150px !important;
   height: auto;
 }
+
 .badge-danger {
   color: #fff;
   background-color: #0181d1;
 }
- .banner-content {
+@media only screen and (max-width: 796px){
+  .banner-content{
+    position: relative !important;
+    width: 100% !important;
+    height: 250px;
+  }
+  .thumb {
+    width: 100% !important;
+    height: auto;
+  }
+  img{
+     height: 150px !important;
+  }
+}
+.banner-content {
+  padding-top: 50px;
+  display: block;
   position: absolute;
   bottom: 0%;
   left: 0%;
   background-color: rgb(0, 0, 0, 0.5);
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -80,6 +107,7 @@ img{
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

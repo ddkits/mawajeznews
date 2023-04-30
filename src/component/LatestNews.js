@@ -24,7 +24,7 @@ export default function LatestNews(props) {
     return <></>;
   } else {
     return (
-      <div className="row  mt-5" data-aos="fade-up">
+      <div className="row  mt-5 pt-5" data-aos="fade-up">
         <div className="col-md-8 d-block">
           <div
             className="card"
@@ -63,7 +63,7 @@ export default function LatestNews(props) {
             </div>
           </div>
         </div>
-        <div className="col-md-4  ">
+        <div className="col-md-4 ">
           <div className="card bg-dark text-white">
             <div className="card-body">
               <h2>أحدث الأخبار</h2>
@@ -71,7 +71,7 @@ export default function LatestNews(props) {
                 return (
                   <div
                     key={element.id}
-                    className="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between"
+                    className="row justify-content-between"
                     onClick={() => {
                       setdescriptionCallback(
                         element?.content?.rendered
@@ -82,21 +82,6 @@ export default function LatestNews(props) {
                       );
                       setShowmore(true);
                     }}>
-                    <div className="pr-3 card-title">
-                      <h5>
-                        {element?.title?.rendered
-                          ? element?.title?.rendered
-                          : element?.title
-                          ? element?.title
-                          : '...'}
-                      </h5>
-                      <div className="fs-12">
-                        <div className="fs-12">{new Date(element?.date).toGMTString()}</div>
-                        <div className="badge badge-danger fs-12 font-weight-bold mb-3">
-                          {element?.author}
-                        </div>
-                      </div>
-                    </div>
                     <div className="rotate-img">
                       <img
                         src={
@@ -111,8 +96,23 @@ export default function LatestNews(props) {
                             ? element?.title
                             : '...'
                         }
-                        className="thumb img-lg"
+                        className="thumb"
                       />
+                    </div>
+                    <div className="pr-3 card-title">
+                      <h5>
+                        {element?.title?.rendered
+                          ? element?.title?.rendered
+                          : element?.title
+                          ? element?.title
+                          : '...'}
+                      </h5>
+                      <div className="fs-12">
+                        <div className="fs-12">{new Date(element?.date).toGMTString()}</div>
+                        <div className="badge badge-danger fs-12 font-weight-bold mb-3">
+                          {element?.author}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );

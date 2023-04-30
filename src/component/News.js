@@ -97,11 +97,14 @@ const News = (props) => {
       ) : (
         ''
       )}
-      <h1 style={{ marginTop: '90px' }} className="text-center">
-        {props?.idtitle ? `${props?.idtitle}` : ' آخر أخبار العالم والشرق الأوسط'}
-      </h1>
-
-      <LatestNews data={headerArt} setDescCallback={(e) => setDescCallback(e)} />
+      <section className="text-center d-block ">
+        <h1 style={{ marginTop: '100px' }}>
+          {props?.idtitle ? `${props?.idtitle}` : ' آخر أخبار العالم والشرق الأوسط'}
+        </h1>
+      </section>
+      <section id="latest-news" className="d-block ">
+        <LatestNews data={headerArt} setDescCallback={(e) => setDescCallback(e)} />
+      </section>
       <hr />
       {/* {this.state.loading && <Spinner />} */}
       <InfiniteScroll
