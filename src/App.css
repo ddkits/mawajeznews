@@ -16,6 +16,13 @@ body {
 #latest-news{
   display: block;
 }
+#description-block{
+  display:block;
+  height: 80vh;
+  overflow-y: auto;
+  width: 100%;
+  margin:auto;
+}
 img {
   object-fit: cover !important;
   width: 100% !important;
@@ -66,6 +73,28 @@ img {
   }
   img{
      height: 150px !important;
+  }
+  #description-block{
+    display:block;
+    height: 90vh;
+    overflow-y: auto;
+    width: 100%;
+    margin:auto;
+  }
+  .navbar-nav{
+    display:block;
+    height: 90vh;
+    overflow-y: auto;
+    width: 100%;
+    margin:auto;
+  }
+  #description-block button{
+    position:fixed;
+    right: 0;
+    width: auto;
+    top: 10%;
+    margin: auto;
+ 
   }
 }
 .banner-content {

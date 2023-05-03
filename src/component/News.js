@@ -74,16 +74,17 @@ const News = (props) => {
         <>
           <section
             key={Math.random()}
-            className="row col-md-12 sticky-top bg-dark text-light p-5 mt-5 maxw-100">
+            id="description-block"
+            className="row col-md-12 sticky-top bg-light text-dark pt-5 mt-5">
             <button
-              className="btn btn-danger mt-4"
+              className="btn btn-danger m-0"
               onClick={() => {
                 setShowmore(false);
               }}>
               X أغلق
             </button>
             <div
-              className="align-middle text-center"
+              className="body align-middle text-center"
               dangerouslySetInnerHTML={{
                 __html: `<div class="p-5" style="max-width: 100% !important"><style>iframe{max-width:100% !important;}</style>${
                   description.split('</iframe></p>')[1]
