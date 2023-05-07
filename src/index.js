@@ -15,10 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3089600610336467"
-      crossOrigin="anonymous"></script>
   </React.StrictMode>
 );
 

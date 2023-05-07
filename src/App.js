@@ -62,6 +62,10 @@ const App = () => {
           </Routes>
         </Router>
       </>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3089600610336467"
+        crossOrigin="anonymous"></script>
     </div>
   );
 };
