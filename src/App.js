@@ -17,6 +17,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { channels } from './component/core/helpers';
 const App = () => {
   const [progress, setProgress] = useState(0);
+
   return (
     <div>
       <>
