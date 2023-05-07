@@ -15,7 +15,6 @@ import LoadingBar from 'react-top-loading-bar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { channels } from './component/core/helpers';
-import Ads from './component/Ads';
 const App = () => {
   const [progress, setProgress] = useState(0);
 
@@ -61,7 +60,6 @@ const App = () => {
               );
             })}
           </Routes>
-          <Ads client="ca-pub-3089600610336467" />
         </Router>
       </>
     </div>

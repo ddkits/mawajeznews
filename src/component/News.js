@@ -90,7 +90,8 @@ const News = (props) => {
                   description.split('</iframe></p>')[1]
                     ? description.split('</iframe></p>')[0]
                     : description
-                }</div>`
+                }</div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3089600610336467"
+                crossorigin="anonymous"></script>`
               }}
             />
           </section>
